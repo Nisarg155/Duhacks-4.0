@@ -7,7 +7,6 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="navbar-title">Classroom</div>
         <div className="navbar-links">
-          <a href="/login" className="login-link">Login</a>
           <a href="/signup" className="signup-button">Sign Up</a>
         </div>
       </div>
