@@ -10,6 +10,7 @@ dotenv.config();
 
 const studentRouter = require("./routers/studetRouter");
 const teacherRouter = require("./routers/teacherRouter");
+const classRouter = require("./routers/classRouter");
 
 app.use(cors('*'));
 app.use(express.json());
@@ -34,6 +35,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/student", studentRouter);
 app.use("/api/teacher", teacherRouter);
+app.use("/api/classes", classRouter);
 app.listen(port, () => {
 
     console.log(`Server running on port ${port}`);
