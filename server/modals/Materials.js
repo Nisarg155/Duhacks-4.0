@@ -7,7 +7,7 @@ const materialSchema = new mongoose.Schema({
     file_names: { type: [String] },
     class_id: { type: String, required: true, index: true },
     code: { type: String, unique: true }
-});
+},{ timestamps: true });
 
 
 

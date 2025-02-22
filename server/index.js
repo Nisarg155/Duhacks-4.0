@@ -12,6 +12,7 @@ const studentRouter = require("./routers/studetRouter");
 const teacherRouter = require("./routers/teacherRouter");
 const classRouter = require("./routers/classRouter");
 const materialsRouter = require("./routers/materialsRouter");
+const assignmentRouter = require("./routers/assignmentRouter");
 
 app.use(cors('*'));
 app.use(express.json());
@@ -38,6 +39,7 @@ app.use("/api/student", studentRouter);
 app.use("/api/teacher", teacherRouter);
 app.use("/api/classes", classRouter);
 app.use("/api/materials" , materialsRouter)
+app.use("/api/assignments", assignmentRouter);
 
 app.listen(port, () => {
 
