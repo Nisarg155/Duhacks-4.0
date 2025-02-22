@@ -1,4 +1,5 @@
 const Teacher = require("../modals/Teacher");
+const Class = require("../modals/Classes");
 
 exports.createNewTeacher = async (req, res) => {
     try {
@@ -9,3 +10,5 @@ exports.createNewTeacher = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
+
+
