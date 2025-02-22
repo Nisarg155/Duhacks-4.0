@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="educonnect@educonnect.9kpaxsh.mongodb.net" uuid="2f2258c7-0cb5-40e3-9caf-8325db1b9cdc">
+      <driver-ref>mongo.4</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
+      <jdbc-url>mongodb+srv://educonnect.9kpaxsh.mongodb.net/educonnect?retryWrites=true&amp;w=majority&amp;appName=EduConnect</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>

@@ -10,9 +10,9 @@ const classSchema = new mongoose.Schema({
     student_names: { type: [String] }
 });
 
-// Apply an index to improve queries
-classSchema.index({ teacher_id: 1 }); 
-classSchema.index({ student_ids: 1 });
+// // Apply an index to improve queries
+// classSchema.index({ teacher_id: 1 });
+// classSchema.index({ student_ids: 1 });
 
 const Class = mongoose.model('Class', classSchema);
 module.exports = Class;

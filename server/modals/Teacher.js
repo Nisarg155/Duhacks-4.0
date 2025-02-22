@@ -5,7 +5,7 @@ const teacherSchema = new mongoose.Schema({
     name: { type: String, required: true }
 });
 
-teacherSchema.index({ teacher_id: 1 }, { unique: true });
+teacherSchema.index({ teacher_id: 1 });
 
 const Teacher = mongoose.model('Teacher', teacherSchema);
 module.exports = Teacher;

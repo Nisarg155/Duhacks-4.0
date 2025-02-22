@@ -12,8 +12,8 @@ const submissionSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 // Creating indexes for optimized queries
-submissionSchema.index({ student_id: 1, assignment_id: 1 });
-submissionSchema.index({ class_code: 1, assignment_id: 1 });
+// submissionSchema.index({ student_id: 1, assignment_id: 1 });
+// submissionSchema.index({ class_code: 1, assignment_id: 1 });
 
 const Submission = mongoose.model('Submission', submissionSchema);
 module.exports = Submission;
