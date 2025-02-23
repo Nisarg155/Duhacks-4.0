@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const submissionSchema = new mongoose.Schema({
-    id: { type: String, required: true, unique: true },
     class_code: { type: String, required: true, index: true },
     assignment_id: { type: String, required: true, index: true },
     file_names: { type: [String], default: [] },

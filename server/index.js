@@ -13,6 +13,7 @@ const teacherRouter = require("./routers/teacherRouter");
 const classRouter = require("./routers/classRouter");
 const materialsRouter = require("./routers/materialsRouter");
 const assignmentRouter = require("./routers/assignmentRouter");
+const submissionRouter = require("./routers/submissionRouter");
 
 app.use(cors('*'));
 app.use(express.json());
@@ -40,6 +41,7 @@ app.use("/api/teacher", teacherRouter);
 app.use("/api/classes", classRouter);
 app.use("/api/materials" , materialsRouter)
 app.use("/api/assignments", assignmentRouter);
+app.use("/api/submissions", submissionRouter);
 
 app.listen(port, () => {
 

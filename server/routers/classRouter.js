@@ -19,4 +19,6 @@ router.post("/join/:uid/:code/:name", classController.joinClass);
 // Route to get classes a student is part of
 router.get("/student_classes/:uid", classController.getStudentClasses);
 
+router.get("/getStudents/:code",classController.getStudents)
+
 module.exports = router;
