@@ -1,6 +1,6 @@
 import React from 'react';
 import './Material.css';
-import TitleDesc from '../ClassDetails/titledesc/titledesc';
+import TitleDesc from '../titledesc/titledesc';
 
 const materials = [
   { text: 'Introduction to DBMS', date: '31 Jan' },
@@ -21,6 +21,7 @@ const Material = () => {
             <li>Home</li>
             <li>To do</li>
             <li>Materials</li>
+            <li>Stastics</li>
           </ul>
         </nav>
       </aside>
