@@ -1,11 +1,16 @@
-const MaterialUpload = (event,name) => {
+const currentDateTime = "00";
+const logoUrl = "url";
+
+//TODO: Add url and current date tiem
+
+const ClassroomCreate = (subjectName,teacherName, name, redirectText, redirectLink) => {
     return `
     <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>${emailTitle}</title>
+    <title>New Learning Material Uploaded - ${subjectName}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -18,35 +23,26 @@ const MaterialUpload = (event,name) => {
     <div class="max-w-md mx-auto p-6 bg-white shadow-lg rounded-lg my-6">
       <!-- Header with Logo -->
       <div class="flex items-center justify-between border-b pb-4"> 
-        <img src="${event.logoUrl}" alt="EduPlatform Logo" class="h-10"/>
-        <p class="text-xs text-gray-500">${event.currentDateTime}</p>
+        <img src="${logoUrl}" alt="EduPlatform Logo" class="h-10"/>
+        <p class="text-xs text-gray-500">${currentDateTime}</p>
       </div>
 
       <!-- Email Title -->
-      <h1 class="text-2xl font-bold text-blue-800 mt-6">New Learning Material Uploaded - ${subjectName}!</h1>
+      <h1 class="text-2xl font-bold text-blue-800 mt-6">New Learning Material Uploaded - ${subjectName}</h1>
       
       <!-- Greeting -->
       <p class="mt-4 text-gray-700">Dear ${name},</p>
       
       <!-- Main Content -->
       <div class="mt-4 space-y-3 text-gray-600 text-sm">
-        <p>You have successfully joined ${className}.
-</p>
-        
-        <!-- Dynamic Content Section -->
-        <div class="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-100">
-          <h2 class="text-lg font-semibold text-blue-800 mb-3">${event.contentTitle}</h2>
-          
-          <!-- Dynamic Fields -->
-          
-        </div>
+        <p>Your teacher ${teacherName} has uploaded new learning material for ${subjectName}</p>
       </div>
       
       <!-- Call to Action -->
       <div class="mt-6 text-center">
-        <a href="${event.ctaLink}" 
+        <a href="${redirectLink}" 
            class="inline-block px-6 py-2 bg-orange-500 text-white text-sm font-semibold rounded-md shadow-md hover:bg-orange-600 transition duration-300">
-          ${event.ctaText}
+          ${redirectText}
         </a>
       </div>
       
@@ -59,7 +55,6 @@ const MaterialUpload = (event,name) => {
       <div class="mt-8 pt-4 border-t">
         <div class="text-center">
           <p class="text-blue-800 font-semibold text-sm mb-1">Your Education Platform</p>
-          <p class="text-gray-500 text-xs">${event.companyAddress}</p>
         </div>
         
         <!-- Legal Disclaimer -->
@@ -77,4 +72,4 @@ const MaterialUpload = (event,name) => {
     `
 }
 
-module.exports = MaterialUpload;
+module.exports = ClassroomCreate;
