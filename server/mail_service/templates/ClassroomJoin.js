@@ -3,7 +3,7 @@ const logoUrl = "url";
 
 //TODO: Add url and current date tiem
 
-const ClassroomCreate = (className,name, redirectText, redirectLink) => {
+const ClassroomJoin = (className,name, redirectText, redirectLink) => {
     return `
     <!DOCTYPE html>
 <html lang="en">
@@ -73,4 +73,4 @@ const ClassroomCreate = (className,name, redirectText, redirectLink) => {
     `
 }
 
-module.exports = ClassroomCreate;
+module.exports = ClassroomJoin;
