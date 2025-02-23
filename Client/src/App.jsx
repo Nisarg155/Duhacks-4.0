@@ -5,7 +5,8 @@ import Materialin from './components/ClassDetails/Materialin/Materialin';
 import TitleDesc from './components/ClassDetails/titledesc/titledesc';
 import Material from './components/ClassDetails/Material/Material';
 import stastics from './components/ClassDetails/stastics/stastics';
-import Assignments from './components/ClassDetails/Assignments/Assignments';
+import Assignmentsdet from './components/ClassDetails/Assignments/Assignmentsdet';
+import Subinfo from './components/ClassDetails/Assignments/Subinfo';
 import {Routes, Route} from 'react-router-dom';
 import Stastics from './components/ClassDetails/stastics/stastics';
 
@@ -19,7 +20,8 @@ const App = () => {
         <Route path='/ClassDetails/titledesc' element={<TitleDesc/>}></Route>
         <Route path='ClassDetails/Material' element={<Material/>}></Route>
         <Route path='ClassDetails/Material/Materialin' element={<Materialin/>}></Route>
-        <Route path='ClassDetails/Assignments' element={<Assignments/>}></Route>
+        <Route path='ClassDetails/Assignments/Assignmentsdets' element={<Assignmentsdet/>}></Route>
+        <Route path='ClassDetails/Assignments/Subinfo' element={<Subinfo/>}></Route>
         <Route path='ClassDetails/stastics' element={<Stastics/>}></Route>
       </Routes>
     </div>
