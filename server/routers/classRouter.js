@@ -11,4 +11,12 @@ router.get("/teacher/:uid", classController.getAllClasses);
 // Route to delete a class by ID
 router.delete("/:classId/:uid", classController.deleteClass);
 
+router.get("/verify_code/:code", classController.verifyCode);
+
+// Route to join a class
+router.post("/join/:uid/:code/:name", classController.joinClass);
+
+// Route to get classes a student is part of
+router.get("/student_classes/:uid", classController.getStudentClasses);
+
 module.exports = router;
