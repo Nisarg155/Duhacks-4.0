@@ -1,0 +1,22 @@
+.title-desc {
+  background-color: #5C88DA; /* Soothing blue */
+  padding: 25px;
+  color: white;
+  font-size: 24px;
+  margin-top: 20px; /* Keeps distance from nav */
+  text-align: center;
+  border-radius: 10px; /* Smooth corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.title-desc h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.title-desc p {
+  margin: 5px 0 0;
+  font-size: 18px;
+  font-style: italic;
+}

@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const Home = () => {
+    const [isSignup, setIsSignup] = useState(false);
+
     return (
         <div className="container">
             <div className="left">
@@ -8,8 +10,14 @@ const Home = () => {
                     <div className="flex-container">
                         <div className="form-container">
                             <div className="form-content">
-                                <h1 className="form-title">Sign in to your account</h1>
+                                <h1 className="form-title">{isSignup ? 'Create an account' : 'Login to your account'}</h1>
                                 <form className="form" action="#">
+                                    {isSignup && (
+                                        <div className="form-group">
+                                            <label htmlFor="fullname" className="form-label">Full Name</label>
+                                            <input type="text" name="fullname" id="fullname" className="form-input" placeholder="John Doe" required />
+                                        </div>
+                                    )}
                                     <div className="form-group">
                                         <label htmlFor="email" className="form-label">Your email</label>
                                         <input type="email" name="email" id="email" className="form-input" placeholder="name@company.com" required />
@@ -19,15 +27,22 @@ const Home = () => {
                                         <input type="password" name="password" id="password" placeholder="••••••••" className="form-input" required />
                                     </div>
                                     <div className="form-flex">
-                                        <div className="form-checkbox-group">
-                                            <input id="remember" aria-describedby="remember" type="checkbox" className="form-checkbox" required />
-                                            <label htmlFor="remember" className="form-checkbox-label">Remember me</label>
-                                        </div>
-                                        <a href="#" className="form-link">Forgot password?</a>
+                                        {!isSignup && (
+                                            <>
+                                                <div className="form-checkbox-group">
+                                                    <input id="remember" type="checkbox" className="form-checkbox" />
+                                                    <label htmlFor="remember" className="form-checkbox-label">Remember me</label>
+                                                </div>
+                                                <a href="#" className="form-link">Forgot password?</a>
+                                            </>
+                                        )}
                                     </div>
-                                    <button type="submit" className="form-button">Sign in</button>
+                                    <button type="submit" className="form-button">{isSignup ? 'Sign up' : 'Log in'}</button>
                                     <p className="form-footer">
-                                        Don’t have an account yet? <a href="#" className="form-link">Sign up</a>
+                                        {isSignup ? 'Already have an account? ' : 'Don’t have an account yet? '}
+                                        <a href="#" className="form-link" onClick={(e) => {e.preventDefault(); setIsSignup(!isSignup);}}>
+                                            {isSignup ? 'Log in' : 'Sign up'}
+                                        </a>
                                     </p>
                                 </form>
                             </div>
@@ -36,10 +51,10 @@ const Home = () => {
                 </section>
             </div>
             <div className="right">
-                <img src="src\assets\imag.jpg" alt="" />
+                <img src="src/assets/imag.jpg" alt="Background" />
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Home
+export default Home;
